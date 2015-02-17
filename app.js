@@ -4,7 +4,7 @@ var http = require('http'),
     url = require('url'),
     getRouter = require('./lib/getRouter.js'),
     routes = [],
-    App = function(){};
+    MyApp = function(){};
 
 var server = http.createServer(function(req, res) {
   var fullPath = url.parse(req.url).pathname,
@@ -23,12 +23,12 @@ var server = http.createServer(function(req, res) {
   }    
 });
 
-App.prototype.work = function(address, callback) {
+MyApp.prototype.startServer = function(address, callback) {
   server.listen(address, callback);
 };
 
-App.prototype.add = function(route) {
+Myapp.prototype.add = function(route) {
   routes.push(route);
 };
 
-module.exports = new App();
+module.exports = new MyApp();
