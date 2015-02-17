@@ -27,7 +27,7 @@ MyApp.prototype.startServer = function(address, callback) {
   server.listen(address, callback);
 };
 
-Myapp.prototype.add = function(route) {
+MyApp.prototype.add = function(route) {
   routes.push(route);
 };
 
